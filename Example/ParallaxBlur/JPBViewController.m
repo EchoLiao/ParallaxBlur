@@ -30,6 +30,12 @@
     [button setTitle:@"Tap" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(alert:) forControlEvents:UIControlEventTouchUpInside];
     [self addHeaderOverlayView:button];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)alert:(UIButton*)sender{
